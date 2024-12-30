@@ -61,7 +61,7 @@ export default function CartProvider({ children }) {
     async function clearCart() {
         try {
             const { data } = await axios.request({ method: "DELETE", url: `https://ecommerce.routemisr.com/api/v1/cart`, headers: { token } })
-            setItems([])
+            setItems(null)
         } catch (error) {
             console.log(error.response.data.message)
 

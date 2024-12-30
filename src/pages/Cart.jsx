@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, } from "react";
 import { Link } from "react-router-dom";
 import { cartContext } from "../context/Cart.context";
 import Loading from "../componat/Loading"
@@ -6,7 +6,9 @@ import CartItems from "../componat/CartItems";
 import { Helmet } from "react-helmet";
 
 export default function Cart() {
-    let { cartItems, clearCart } = useContext(cartContext)
+    
+    let { cartItems, clearCart,getCartItems} = useContext(cartContext)
+  useEffect(()=>{getCartItems()})
     function map() {
         let a = [];
         let items = cartItems.data.products
@@ -15,6 +17,7 @@ export default function Cart() {
                 a.push(<CartItems cartItem={items[i]} key={items[i]._id} />)
             }
         }
+        
         return a
 
     }
