@@ -9,8 +9,6 @@
 
 ## Getting Started
 
-The app is not deployed yet, so you can run it locally:
-
 1. Clone the repository to your local machine.
 
 2. Install the required dependencies.
