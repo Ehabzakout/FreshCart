@@ -1,8 +1,24 @@
-# React + Vite
+## Abstract
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+•
+• E-commerce app is a store for products, provide cart and wishlist that improve user experience for purchasing  
+• And use context to get data for all app and solve prop drilling problem
+• Support navigation and authentication
+• Support payment by strip and cash
+• App enhance my experience how to use libraries (Formic, Yup, react query to fetch and cash data ,image slider library, tailwind)
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app is not deployed yet, so you can run it locally:
+
+1. Clone the repository to your local machine.
+
+2. Install the required dependencies.
+
+3. Run the application locally.
+
+```bash
+
+# Run the app
+  npm run dev
+```
