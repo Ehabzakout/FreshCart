@@ -10,10 +10,10 @@ export default function Navbar() {
 	let { wishList, getWishList } = useContext(wishlistContext);
 	useEffect(() => {
 		getCartItems();
-	});
+	}, []);
 	useEffect(() => {
 		getWishList();
-	});
+	}, []);
 	return (
 		<>
 			<nav className="bg-slate-100 fixed top-0 left-0 right-0 z-10">

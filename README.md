@@ -5,11 +5,9 @@
 • And use context to get data for all app and solve prop drilling problem
 • Support navigation and authentication
 • Support payment by strip and cash
-• App enhance my experience how to use libraries (Formic, Yup, react query to fetch and cash data ,image slider library, tailwind)
+• App enhance my experience how to use libraries (react-router-dom,axios,JWT decode,react-helmet,swiper, Formic, Yup, react query to fetch and cash data ,image slider library, tailwind)
 
 ## Getting Started
-
-The app is not deployed yet, so you can run it locally:
 
 1. Clone the repository to your local machine.
 
