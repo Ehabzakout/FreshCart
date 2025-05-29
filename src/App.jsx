@@ -32,24 +32,58 @@ function App() {
 	const routes = createBrowserRouter([
 		{
 			path: "/",
-			element: (
-				<ProtectedRoute>
-					<Layout />
-				</ProtectedRoute>
-			),
+			element: <Layout />,
 			children: [
 				{ path: "*", element: <Notfound /> },
 				{ index: true, element: <Home /> },
-				{ path: "products/:id", element: <Product /> },
-				{ path: "/cart", element: <Cart /> },
-				{ path: "/CheckOut", element: <CheckOut /> },
-				{ path: "/allOrders", element: <AllOrders /> },
+				{ path: "/products/:id", element: <Product /> },
 				{ path: "/Categories", element: <Categories /> },
-				{ path: "Categories/:id", element: <CartDetails /> },
-				{ path: "Products", element: <Products /> },
-				{ path: "wishlist", element: <Wishlist /> },
-				{ path: "brands", element: <Brands /> },
+				{ path: "/Products", element: <Products /> },
+				{ path: "/brands", element: <Brands /> },
 				{ path: "/brands/:id", element: <BrandID /> },
+				{
+					path: "/cart",
+					element: (
+						<ProtectedRoute>
+							<Cart />
+						</ProtectedRoute>
+					),
+				},
+				{
+					path: "/CheckOut",
+					element: (
+						<ProtectedRoute>
+							<CheckOut />{" "}
+						</ProtectedRoute>
+					),
+				},
+				{
+					path: "/allOrders",
+					element: (
+						<ProtectedRoute>
+							<AllOrders />
+						</ProtectedRoute>
+					),
+				},
+
+				{
+					path: "/Categories/:id",
+					element: (
+						<ProtectedRoute>
+							<CartDetails />
+						</ProtectedRoute>
+					),
+				},
+
+				{
+					path: "/wishlist",
+					element: (
+						<ProtectedRoute>
+							<Wishlist />
+						</ProtectedRoute>
+					),
+				},
+
 				{
 					path: "/userdata",
 					element: <UserData />,

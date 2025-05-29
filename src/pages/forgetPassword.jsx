@@ -2,13 +2,14 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { userContext } from "../context/User.context";
+import { useNavigate } from "react-router-dom";
 
 export default function ForgetPass() {
 	const [show, setShow] = useState(null);
 	const [reset, setRe] = useState(null);
 	const [error, setError] = useState(null);
 	const { logOut } = useContext(userContext);
-
+	const nav = useNavigate();
 	let inputValue = "";
 	let code = "";
 	let newPassword = "";
@@ -67,6 +68,7 @@ export default function ForgetPass() {
 				toast.success("Your Password has been changed");
 				newPassword = "";
 				setTimeout(logOut(), 2000);
+				nav("/auth/login");
 				void data;
 			} catch (error) {
 				toast.dismiss(waite);

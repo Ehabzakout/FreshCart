@@ -14,7 +14,7 @@ export default function BrandID() {
 	}
 	const { data } = useQuery({ queryKey: ["brands"], queryFn: getBrand });
 	const details = data?.data.data || null;
-	console.log(details);
+
 	return (
 		<>
 			{details ? (
